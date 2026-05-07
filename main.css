@@ -1,0 +1,47 @@
+p {
+    color: rgb(146, 155, 179);
+}
+
+h1 {
+    color: rgb(119, 126, 146);
+}
+
+h3 {
+    color: rgb(119, 126, 146);
+}
+
+h6 {
+    color: rgb(119, 126, 146);
+}
+
+body {
+  background-color: #22253d;
+  font-family: "DynaPuff";
+  padding: 20px;
+  line-height: 2;
+  word-spacing: 25%;
+  word-wrap: break-word;
+}
+
+#GIVEMESPACE {
+    margin-bottom: 40px;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+a:hover {
+    color: rgb(27, 26, 26)
+}
+
+nav {
+    background-color: rgb(65, 61, 61);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+}
