@@ -23,6 +23,19 @@ body {
   word-wrap: break-word;
 }
 
+summary {
+    background-color: #696d8b;
+    border-radius: 8px;
+    margin: 30px;
+    padding: 18px;
+}
+
+#status {
+    margin-left: 50px;
+    margin-right: 50px;
+    border-width: 20px;
+}
+
 #GIVEMESPACE {
     margin-bottom: 40px;
 }
