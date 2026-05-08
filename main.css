@@ -6,11 +6,11 @@ h1 {
     color: rgb(119, 126, 146);
 }
 
-h3 {
+h2 {
     color: rgb(119, 126, 146);
 }
 
-h6 {
+h3 {
     color: rgb(119, 126, 146);
 }
 
@@ -31,8 +31,9 @@ a {
     color: grey;
     text-decoration: none;
     padding: 14px 16px;
-    text-align: center;
     display: inline-block;
+    text-align: center;
+
 }
 
 a:hover {
@@ -45,3 +46,61 @@ nav {
     text-align: center;
     padding: 0;
 }
+
+button {
+  color: black;
+  font-family: "DynaPuff";
+  background-color: rgb(173, 184, 204);
+  border-width: 0;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+input {
+    color: rgb(34, 37, 41);
+    font-family: "DynaPuff";
+    background-color: rgb(173, 184, 204);
+    border-width: 0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.search-highlight {
+  background: #b5badf;
+  color: rgb(35, 51, 75);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.search-result {
+  margin-bottom: 20px;
+  background: #313341;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 25px;
+}
+
+.search-result a {
+  text-decoration: none;
+}
+
+.match-box {
+  cursor: pointer;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.match-box:hover {
+  background: #f5f5f5;
+}
+
