@@ -48,6 +48,15 @@ summary {
     margin-bottom: 40px;
 }
 
+#GIVEMEMORESPACE {
+    margin-bottom: 60px;
+}
+
+#note {
+    font-size: 0.8em;
+    margin-bottom: 80px;
+}
+
 a {
     color: grey;
     text-decoration: none;
