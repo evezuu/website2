@@ -1,5 +1,17 @@
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("h1,h3,h4,li").forEach(el => {
+
+        const base = el.textContent
+            .trim()
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w-]/g, "");
+
+        el.id = base;
+    });
+});
+
 const pageURLs = [
-    "index.html",
     "unit1.html",
     "unit2.html",
     "unit3.html",
@@ -19,10 +31,7 @@ const info = document.getElementById("info");
 
 let pages = [];
 
-
-// --------------------
 // LOAD ALL PAGES
-// --------------------
 async function loadPages() {
     const loaded = await Promise.all(
         pageURLs.map(async (url) => {
@@ -31,47 +40,23 @@ async function loadPages() {
 
         const res = await fetch(url);
         const html = await res.text();
-
         const doc = new DOMParser()
         .parseFromString(html, "text/html");
 
-        // auto-generate heading IDs if missing
-        doc.querySelectorAll("h1,h2,h3").forEach(h => {
-            if (!h.id) {
-                h.id = h.textContent
-                .trim()
-                .toLowerCase()
-                .replace(/\s+/g, "-")
-                .replace(/[^\w-]/g, "");
-            }
-        });
-
         // collect searchable elements
         const elements = [
-            ...doc.querySelectorAll("h1,h2,h3,p,li")
+            ...doc.querySelectorAll("h1,h3,h4,p,li")
         ];
 
         return elements.map(el => {
             const text = el.textContent || "";
+
             // find nearest heading/section id
-            let anchor = "";
-            
-            const section = el.closest("section[id]");
-            if (section) {
-                anchor = "#" + section.id;
-            } else {
-                let prev = el.previousElementSibling;
-                while (prev) {
-                    if (
-                        /^H[1-6]$/.test(prev.tagName) &&
-                        prev.id
-                    ) {
-                        anchor = "#" + prev.id;
-                        break;
-                    }
-                    prev = prev.previousElementSibling;
-                }
-            }
+            const anchor = "#" + el.textContent
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[^\w-]/g, "");
             
         return {
             url,
@@ -169,7 +154,13 @@ function performSearch(query) {
         wrapper.className = "match-box";
 
         wrapper.onclick = () => {
-            window.location.href = page.url + match.anchor;
+            const id = match.text
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[^\w-]/g, "");
+
+            window.location.href = `${page.url}#${id}`;
         };
 
         wrapper.appendChild(p);
@@ -193,9 +184,18 @@ function performSearch(query) {
 // --------------------
 // INIT
 // --------------------
-loadPages().then(() => {
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        performSearch(input.value);
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (!form || !input || !results) {
+        console.log("skip search init");
+        return;
+    }
+
+    loadPages().then(() => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            performSearch(input.value);
+        });
     });
+
 });
