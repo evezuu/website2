@@ -14,12 +14,20 @@ h3 {
     color: rgb(119, 126, 146);
 }
 
+h4 {
+    color: rgb(119, 126, 146);
+}
+
+li {
+    color: rgb(119, 126, 146);
+}
+
 body {
   background-color: #22253d;
   font-family: "DynaPuff";
   padding: 20px;
   line-height: 2;
-  word-spacing: 25%;
+  word-spacing: 35%;
   word-wrap: break-word;
 }
 
