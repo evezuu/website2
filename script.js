@@ -55,7 +55,10 @@ async function loadPages() {
         // collects searchable elements
         const elements = [
             ...doc.querySelectorAll("h1,h3,h4,p,li")
-        ];
+        ].filter(el => 
+            !el.closest(".sidebar") && //doesn't show the toc?
+            el.id !== "note" //doesn't show my note
+        ); 
 
         return elements.map(el => {
             const text = el.textContent || "";
