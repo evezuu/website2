@@ -27,8 +27,13 @@ body {
   font-family: "DynaPuff";
   padding: 20px;
   line-height: 2;
-  word-spacing: 35%;
+  word-spacing: 37%;
   word-wrap: break-word;
+}
+
+main {
+    margin: 30px;
+    padding-top: 1px;
 }
 
 summary {
@@ -52,6 +57,19 @@ summary {
     margin-bottom: 40px;
 }
 
+img {
+    border-radius: 6px;
+    max-width: 30%;
+}
+
+#centerimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 #GIVEMESPACE {
     margin-bottom: 40px;
 }
@@ -72,11 +90,10 @@ a {
     padding: 14px 16px;
     display: inline-block;
     text-align: center;
-
 }
 
 a:hover {
-    color: rgb(141, 134, 134)
+    color: rgb(128, 131, 150)
 }
 
 nav {
@@ -84,6 +101,9 @@ nav {
     overflow: hidden;
     border-radius: 8px;
     text-align: center;
+    padding: 30px;
+  
+
 }
 
 #well {
@@ -178,6 +198,8 @@ html {
 
     transition: 0.3s ease;
 
+    font-size: 14px;
+
 }
 
 .toc {
@@ -234,5 +256,6 @@ html {
 .content {
     flex: 1;
     padding: 40px;
+    margin-top: 0px;
     transition: 0.3s ease;
 }
