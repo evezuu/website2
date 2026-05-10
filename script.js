@@ -213,3 +213,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// SIDEBAR FOR TOC IN VOCAB
+document.addEventListener("DOMContentLoaded", () => {
+
+    const button = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+
+    button.addEventListener("click", () => {
+        sidebar.classList.toggle("closed"); //closing closing ehehe
+    });
+});
+
+

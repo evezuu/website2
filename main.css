@@ -65,6 +65,7 @@ summary {
     margin-bottom: 80px;
 }
 
+/*js all my searchbox/index stuff mainly*/
 a {
     color: rgb(96, 97, 117);
     text-decoration: none;
@@ -83,7 +84,14 @@ nav {
     overflow: hidden;
     border-radius: 8px;
     text-align: center;
-    padding: 0;
+}
+
+#well {
+    background-color: rgb(24, 26, 43);
+    overflow: hidden;
+    border-radius: 8px;
+    border-bottom-left-radius: 0px;
+    text-align: center;
 }
 
 button {
@@ -143,20 +151,88 @@ html {
   background: #242438;
 }
 
+
+
 /*for table of contents*/
 .layout {
     display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    scrollbar-color: #3a3d5c rgb(18, 20, 32);
 }
 
 .sidebar {
-    position: sticky;
     padding: 20px;
+    overflow-y: hidden;
+
+    width: 250px;
+    top: 0px;
+    height: 100vh;
+    position: sticky;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(18, 20, 32);
+    border-right: 1px solid #29273a;
+
+    transition: 0.3s ease;
+
+}
+
+.toc {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 100px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.toc h2 {
+    line-height: 0;
+}
+
+.sidebar.closed {
+    width: 41px;
+    overflow: hidden;
+}
+
+.sidebar.closed h2, 
+.sidebar.closed li,
+.sidebar.closed a {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.sidebar.closed .toc {
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .sidebar a {
     text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
 }
 
 .sidebar a:hover {
-    background: #242438;
+    background: #23233b;
+    color: #b7b8e981;
+}
+
+
+#toggleSidebar {
+    width: 40px;
+    height: 40px;
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: rgb(96, 97, 117)
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    transition: 0.3s ease;
 }
