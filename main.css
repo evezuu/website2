@@ -45,6 +45,13 @@ summary {
     border-width: 20px;
 }
 
+#status-end {
+    margin-left: 50px;
+    margin-right: 50px;
+    border-width: 20px;
+    margin-bottom: 40px;
+}
+
 #GIVEMESPACE {
     margin-bottom: 40px;
 }
@@ -136,3 +143,20 @@ html {
   background: #242438;
 }
 
+/*for table of contents*/
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    padding: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #242438;
+}

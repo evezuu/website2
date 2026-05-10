@@ -24,6 +24,87 @@
             <a href="./unit9.html">Unit 9</a>
             <a href="./vocab.html">Vocab</a>
         </nav>
+
+
+        <div class="layout">
+            <aside class="sidebar">
+                <h2>Contents</h2>
+                <ol class="toc" role="list">
+
+                    <li>
+                        <a href="#unit-1-introduction">Unit 1: Introduction</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-1-environmental-science-studying-the-state-of-our-earth">Chapter 1 - Environmental Science, Studying the State of Our Earth</a></li>
+                            <li><a href="#chapter-2-environmental-systems">Chapter 2 - Environmental Systems</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#unit-2-the-living-world-ecosystems-and-biodiversity">Unit 2: The Living World, Ecosystems and Biodiversity</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-3-ecosystem-ecology">Chapter 3- Ecosystem Ecology</a></li>
+                            <li><a href="#chapter-4-global-climates-and-biomes">Chapter 4 - Global Climates and Biomes</a></li>
+                            <li><a href="#chapter-5-evolution-of-biodiversity">Chapter 5 - Evolution of Biodiversity</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#unit-3-biological-and-human-populations">Unit 3: Biological and Human Populations</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-6-population-and-community-ecology">Chapter 6 - Population and Community Ecology</a></li>
+                            <li><a href="#chapter-7-the-human-population">Chapter 7 - The Human Population</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#unit-4-earth-systems-and-resources">Unit 4: Earth Systems And Resources</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-8-earth-systems">Chapter 8 - Earth Systems</a></li>
+                            <li><a href="#chapter-9-water-resources-and-water-use">Chapter 9 - Water Resources and Water Use</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#unit-5-land-use">Unit 5: Land Use</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-10-land-public-and-private">Chapter 10 - Land, Public, and Private</a></li>
+                            <li><a href="#chapter-11-feeding-the-world">Chapter 11 - Feeding the World</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#unit-6-energy-resources-and-consumption">Unit 6: Energy Resources and Consumption</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-12-nonrenewable-energy-resources">Chapter 12 - Nonrenewable Energy Resources</a></li>
+                            <li><a href="#chapter-13-achieving-energy-sustainability">Chapter 13 - Achieving Energy Sustainability</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#unit-7-pollution-aquatic-atmospheric-and-terrestrial">Unit 7: Pollution</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-14-aquatic-pollution">Chapter 14 - Aquatic Pollution</a></li>
+                            <li><a href="#chapter-15-atmospheric-pollution-and-ozone-depletion">Chapter 15 - Atmospheric Pollution and Stratospheric Ozone Depletion</a></li>
+                            <li><a href="#chapter-16-waste-generation-terrestrial-pollution-and-waste-disposal">Chapter 16 - Waste Generation, Terrestrial Pollution, and Waste Disposal</a></li>
+                            <li><a href="#chapter-17-human-health-and-environmental-risks">Chapter 17 - Human Health and Environmental Risks</a></li>
+                        </ul>
+                    </li>
+
+                        <li>
+                        <a href="#unit-8-global-change-and-a-sustainable-future">Unit 8: Global Change and a Sustainable Future</a>
+                        <ul class="subtoc">
+                            <li><a href="#chapter-18-conservation-of-biodiversity">Chapter 18 - Conservation of Biodiversity</a></li>
+                            <li><a href="#chapter-19-global-change">Chapter 19 - Global Change</a></li>
+                            <li><a href="#chapter-20-sustainability-economics-and-equity">Chapter 20 - Sustainability, Economics, and Equity</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </aside>
+        </div>
+
+
+
         <h1>Important Vocabulary</h1>
         <p id="note">Note: I'm taking all the vocabulary from my AP Textbook. It has all the AP content, but some of the units aren't categorized exactly how Collegeboard did it: they might be  labelled differently, combined, or separated. Either way, it's honestly the same thing formatted different so I just labelled the sections as how the textbook had done it. The "unit" notes in the other pages of this website are all as Collegeboard intended.</p>
         <h3>Unit 1, "Introduction"</h3>
@@ -285,7 +366,7 @@
                 <li>Population density</li>
                 <li>Population distribution</li>
                 <li>Sex ratio</li>
-                <li id="age-structure">Age structure</li>
+                <li>Age structure</li>
                 <li>Limiting resource</li>
                 <li>Density-dependent factor</li>
                 <li>Carrying capacity (K)</li>
@@ -804,15 +885,7 @@
                 <li>Triple bottom line</li>
             </ul>
 
-        <script src="script.js" defer>
-            document.querySelectorAll("li").forEach((el, i) => {
-                el.id = el.textContent
-                    .trim()
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")
-                    .replace(/[^\w-]/g, "") + "-" + i;
-            });
-        </script>
+        <script src="script.js" defer></script>
     </body>
 
 
